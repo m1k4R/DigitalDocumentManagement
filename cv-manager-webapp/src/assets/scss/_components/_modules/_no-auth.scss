@@ -1,0 +1,46 @@
+.m-noAuth {
+    &__form {
+        height: auto;
+        padding: 20px;
+        margin-top: 80px;
+
+        @include media-up(m) {
+            padding: 0;
+            margin: 100px 30px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 80px;
+        margin-left: 10px;
+
+        &--icon {
+            background-image: url(../../../images/logo.png);
+            height: 40px;
+            width: 70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &--title {
+            font-size: 18px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        background-image: url(../../../images/noAuth.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include media-down(l) {
+            display: none;
+        }
+    }
+}

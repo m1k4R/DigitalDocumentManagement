@@ -1,0 +1,70 @@
+.m-radioGroupContainer {
+    z-index: 3;
+
+    &__options {
+        padding: 15px 0 10px 20px;
+        background-color: $white;
+        border: 1px solid $gray-4;
+        border-radius: 4px;
+        transition: 0.3s;
+
+        &:hover {
+            border: 1px solid $primary-light-color;
+            transition: 0.3s;
+        }
+    }
+
+    .m-radioGroup {
+        display: flex;
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin: 0 20px 0 0;
+
+            .radio {
+                height: 20px;
+                width: 20px;
+                border: 1px solid $gray-13;
+                border-radius: 10px;
+                border-radius: 50%;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                transition: background-image 0.3s, box-shadow 0.3s,
+                    border-color 0.3s;
+
+                &::after {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $primary-color;
+                    transform: scale(0);
+                    transition: transform 0.3s;
+                }
+            }
+
+            label {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        input:checked + label {
+            .radio {
+                border: 1px solid $primary-color;
+                &::after {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

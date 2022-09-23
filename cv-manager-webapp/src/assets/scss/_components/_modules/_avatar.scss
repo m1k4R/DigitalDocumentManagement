@@ -1,0 +1,163 @@
+.m-avatar {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+
+    &__imgInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        user-select: none;
+        border: 1px solid $secondary-color;
+        background-color: rgba(223, 223, 223, 0.5);
+
+        @include media-up(m) {
+            width: 44px;
+            height: 44px;
+        }
+
+        img {
+            width: 38px;
+            height: 38px;
+            background-color: $primary-color;
+            object-fit: cover;
+            border-radius: 50%;
+
+            @include media-up(m) {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__info {
+        display: flex;
+        color: $secondary-color;
+        flex-direction: column;
+        margin: 0 17px 0 8px;
+    }
+
+    &__name {
+        font-size: 12px;
+        line-height: 22px;
+        white-space: nowrap;
+        font-weight: 600;
+        letter-spacing: -0.23px;
+        display: none;
+
+        @include media-up(s) {
+            display: block;
+        }
+
+        @include media-up(m) {
+            font-size: 16px;
+        }
+    }
+
+    &__popup {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: -5px;
+        width: max-content;
+        min-width: 200px;
+        transform: translateY(-20px);
+        background: $white;
+        padding: 4px;
+        box-sizing: border-box;
+        border: 1px solid rgba($primary-color, 0.2);
+        border-radius: 10px;
+        background-color: $white;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        animation-name: show;
+        animation-duration: 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+
+        @include media-up(m) {
+            right: -10px;
+            top: 55px;
+        }
+
+        &.-open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: initial;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 40px;
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: $white;
+            border: 1px solid rgba($primary-color, 0.2);
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 10px 8px 0;
+        font-weight: 600;
+        color: $primary-color;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+
+        svg {
+            transition: stroke 0.3s;
+        }
+
+        &:hover {
+            svg {
+                stroke: $secondary-color;
+            }
+        }
+
+        &.-logout {
+            width: 100%;
+            padding: 8px 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: color 0.3s, background-color 0.3s;
+            color: $secondary-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.m-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    border-bottom: 1px solid $gray-10;
+    transition: 0.5s;
+    padding-left: 120px;
+    position: fixed;
+    height: $header-height;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    &.-topLevel {
+        right: 0;
+        padding-left: 30px;
+    }
+
+    &__logo {
+        padding-left: 40px;
+        @include media-up(m) {
+            padding-left: 0;
+        }
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+    }
+}

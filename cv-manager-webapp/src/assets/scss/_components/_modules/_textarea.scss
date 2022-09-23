@@ -1,0 +1,15 @@
+.m-textarea {
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        color: $secondary-color;
+        border: 1px solid $gray-4;
+        background-color: $white;
+        filter: none;
+        resize: none;
+
+        &:focus {
+            outline: 1px solid $primary-color;
+        }
+    }
+}

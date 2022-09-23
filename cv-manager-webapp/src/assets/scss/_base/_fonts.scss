@@ -1,0 +1,102 @@
+// Use $font-path from _vars/_base.scss as path to fonts folder or update it here
+// Use https://transfonter.org/ to generate fonts and update font path here
+// Default font path (relative to style.css) is ../fonts (that is value of $font-path)
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../../fonts/Barlow/Barlow-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../../fonts/Barlow/Barlow-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../fonts/Avenir/Avenir-Medium.woff2') format('woff2'),
+        url('../../fonts/Avenir/Avenir-Medium.woff') format('woff'),
+        url('../../fonts/Avenir/Avenir-Medium.svg#Avenir-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../fonts/Avenir/Avenir-Book.woff2') format('woff2'),
+        url('../../fonts/Avenir/Avenir-Book.woff') format('woff'),
+        url('../../fonts/Avenir/Avenir-Book.svg#Avenir-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../fonts/Avenir/Avenir-Heavy.woff2') format('woff2'),
+        url('../../fonts/Avenir/Avenir-Heavy.woff') format('woff'),
+        url('../../fonts/Avenir/Avenir-Heavy.svg#Avenir-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy/GilroyW00-Bold.woff2') format('woff2'),
+        url('../../fonts/Gilroy/GilroyW00-Bold.woff') format('woff'),
+        url('../../fonts/Gilroy/GilroyW00-Bold.svg#GilroyW00-Bold')
+            format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy/Gilroy-Medium.woff2') format('woff2'),
+        url('../../fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+        url('../../fonts/Gilroy/Gilroy-Medium.svg#Gilroy-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy/GilroyW00-Regular.woff2') format('woff2'),
+        url('../../fonts/Gilroy/GilroyW00-Regular.woff') format('woff'),
+        url('../../fonts/Gilroy/GilroyW00-Regular.svg#GilroyW00-Regular')
+            format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy/Gilroy-Light.woff2') format('woff2'),
+        url('../../fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+        url('../../fonts/Gilroy/Gilroy-Light.svg#Gilroy-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../../fonts/SFPro/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../../fonts/SFPro/SFProDisplay-Regular.woff') format('woff'),
+        url('../../fonts/SFPro/SFProDisplay-Regular.svg#SFProDisplay-Regular')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

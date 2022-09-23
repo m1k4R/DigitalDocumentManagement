@@ -1,0 +1,31 @@
+.m-toggler {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    z-index: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    bottom: 25px;
+    background-color: $primary-color;
+    cursor: pointer;
+    transition: 0.5s;
+
+    @include media-up(m) {
+        display: none;
+    }
+
+    span {
+        display: block;
+        height: 4px;
+        width: 70%;
+        margin: 6px auto;
+        background-color: $white;
+        border-radius: 2px;
+    }
+
+    span:first-child {
+        margin-top: 8px;
+    }
+}

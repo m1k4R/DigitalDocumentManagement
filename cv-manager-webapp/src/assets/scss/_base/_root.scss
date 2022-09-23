@@ -1,0 +1,7 @@
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+
+  @each $bp, $value in $grid-breakpoints {
+    --#{$bp}: #{$value};
+  }
+}

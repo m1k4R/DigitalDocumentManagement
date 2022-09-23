@@ -1,0 +1,41 @@
+$white: #fff !default;
+$gray-1: #f8f9fa !default;
+$gray-2: #e9ecef !default;
+$gray-3: #dee2e6 !default;
+$gray-4: #ced4da !default;
+$gray-5: #adb5bd !default;
+$gray-6: #6c757d !default;
+$gray-7: #495057 !default;
+$gray-8: #343a40 !default;
+$gray-9: #212529 !default;
+$gray-10: #d1d1d9;
+$gray-11: #d9dfe4;
+$gray-12: #eef0f6;
+$gray-13: #fbfbfb;
+$gray-14: #0d0915;
+$gray-15: #f8fafd;
+$gray-16: #212531;
+$gray-17: #e9eff7;
+$black: #000 !default;
+
+$blue: #3a84f9;
+$red: #ff6762;
+$blue-dark: #25272c;
+
+// Set a specific jump point for requesting color jumps
+$color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$contrast-threshold: 150 !default;
+
+$color-info: #3498db;
+$color-success: #2ecc71;
+$color-warning: #f1c40f;
+$color-error: #e74c3c;
+
+$primary-color: #018fd0;
+$primary-light-color: #dff0f8;
+$secondary-color: #383f52;
+$secondary-light-color: #b4b9c4;
+$base-color: #d3c9c94d;
+$main-color: #f8fafd;

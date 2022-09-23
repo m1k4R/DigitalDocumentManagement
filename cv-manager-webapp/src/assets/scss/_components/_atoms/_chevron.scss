@@ -1,0 +1,24 @@
+.a-chevron {
+    display: inline-block;
+    border: 1.5px solid $secondary-color;
+    border-width: 3px;
+    width: 5px;
+    height: 5px;
+    margin-top: -3px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transition: transform 0.3s, border-color 0.3s, margin-top 0.3s;
+    cursor: pointer;
+
+    &.-up {
+        border-right-color: rgba($secondary-color, 0.5);
+        border-bottom-color: rgba($secondary-color, 0.5);
+        transform: rotate(225deg);
+    }
+
+    &.-down {
+        border-right-color: $secondary-color;
+        border-bottom-color: $secondary-color;
+        transform: rotate(45deg);
+    }
+}

@@ -1,0 +1,41 @@
+.m-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    max-width: $main-closed-width;
+    margin-left: $sidebar-closed-width;
+    padding-top: $header-height;
+
+    &.-sidebarIsOpen {
+        transition: 0.5s;
+
+        @include media-up(m) {
+            max-width: $main-width;
+            margin-left: $sidebar-width;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin: 20px auto;
+        padding: 0 20px;
+
+        ._wr {
+            max-width: 100%;
+            margin: 0;
+
+            @include media-up(xxl) {
+                margin: inherit;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+}

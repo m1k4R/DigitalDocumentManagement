@@ -1,0 +1,86 @@
+.m-languagePicker {
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-right: 20px;
+
+        .a-chevron {
+            margin-left: 10px;
+        }
+    }
+
+    &__popup {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -22px;
+        top: 30px;
+        width: max-content;
+        min-width: 130px;
+        transform: translateY(-20px);
+        background: $white;
+        padding: 4px;
+        box-sizing: border-box;
+        border: 1px solid rgba($primary-color, 0.2);
+        border-radius: 10px;
+        background-color: $white;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        animation-name: show;
+        animation-duration: 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+
+        &.-open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: initial;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 40px;
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: $white;
+            border: 1px solid rgba($primary-color, 0.2);
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 8px 0;
+            color: #383f52;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            cursor: pointer;
+            background-color: transparent;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        .flagIcon {
+            border-radius: 5px;
+            width: 25px;
+        }
+    }
+}

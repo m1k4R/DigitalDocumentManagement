@@ -1,0 +1,16 @@
+.m-form {
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &.-login,
+    &.-register {
+        .a-btn {
+            margin-bottom: 10px;
+        }
+    }
+}
