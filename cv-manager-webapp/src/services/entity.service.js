@@ -31,12 +31,13 @@ export const getEntityByIdService = async (
     id,
     params,
     isJSONAPI = true,
-    apiUrl
+    apiUrl,
+    responseType
 ) => {
     try {
         const PATH = `/${entity}/${id}`
         const url = formatUrl(PATH, params)
-        const response = await axios(GET, url, null, isJSONAPI, apiUrl)
+        const response = await axios(GET, url, null, isJSONAPI, apiUrl, responseType)
         if (!isJSONAPI) {
             return response.data
         } else {

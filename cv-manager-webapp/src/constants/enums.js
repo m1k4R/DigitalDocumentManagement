@@ -73,3 +73,11 @@ export const TABLE_FILTER_TYPE = {
 export const MODAL_TYPES = {
     SMALL: '-small',
 }
+
+export const EDUCATIONS = [
+    {name:'Elementary school', id: 1},
+    {name:'High school', id: 2},
+    {name:'Bachelors degree', id: 3},
+    {name:'Masters degree', id: 4},
+    {name:'PhD degree', id: 5}
+]

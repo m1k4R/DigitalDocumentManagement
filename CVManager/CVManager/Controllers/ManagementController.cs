@@ -40,7 +40,7 @@ namespace CVManager.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
+        [HttpGet("documents")]
         [AllowAnonymous]
         public async Task<IActionResult> GetAll(CancellationToken token = default)
         {
@@ -58,10 +58,28 @@ namespace CVManager.Controllers
 
         [HttpGet("search-by-phrase")]
         [AllowAnonymous]
-        public async Task<IActionResult> SearchByEducationLevel([FromQuery] SearchApplicantsByPhraseRequest request,
+        public async Task<IActionResult> SearchByPhrase([FromQuery] SearchApplicantsByPhraseRequest request,
         CancellationToken token = default)
         {
             var response = await _managerService.SearchApplicantsByPhraseResponse(request, token);
+            return Ok(response);
+        }
+
+        [HttpGet("search-by-combined-parameters")]
+        [AllowAnonymous]
+        public async Task<IActionResult> SearchByCombinedParameters([FromQuery] SearchByCombinedParametersRequest request,
+        CancellationToken token = default)
+        {
+            var response = await _managerService.SearchByCombinedParameters(request, token);
+            return Ok(response);
+        }
+
+        [HttpGet("search-by-name")]
+        [AllowAnonymous]
+        public async Task<IActionResult> SearchByName([FromQuery] SearchDocumentsByApplicantNameRequest request,
+        CancellationToken token = default)
+        {
+            var response = await _managerService.SearchDocumentsByApplicantName(request, token);
             return Ok(response);
         }
 
@@ -80,6 +98,14 @@ namespace CVManager.Controllers
         {
             var response = await _managerService.DownloadCvById(request, token);
             return File(response.CvContent, "application/octet-stream", response.CvName);
+        }
+
+        [HttpDelete("delete/{documentId:guid}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> DeleteDocument([FromRoute] DeleteApplicationByIdRequest request, CancellationToken token = default)
+        {
+            await _managerService.DeleteApplicationById(request, token);
+            return Ok();
         }
     }
 }

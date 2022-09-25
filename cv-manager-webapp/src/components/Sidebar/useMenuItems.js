@@ -2,43 +2,17 @@ import ROUTES from 'constants/routes'
 
 const MENU_ITEMS = [
     {
-        key: 'home',
-        label: 'menuItems.home',
+        key: 'cvSearch',
+        label: 'menuItems.cvSearch',
         icon: 'home',
         to: ROUTES.HOME,
     },
     {
-        key: 'reports',
-        label: 'menuItems.home',
-        to: '/reports',
+        key: 'userApplication',
+        label: 'menuItems.userApplication',
         icon: 'home',
-        subitems: [
-            {
-                key: 'daily-reports',
-                label: 'menuItems.home',
-                to: '/daily-reports',
-                icon: 'home',
-            },
-            {
-                key: 'weekly-reports',
-                label: 'menuItems.home',
-                to: '/weekly-reports',
-                icon: 'home',
-            },
-        ],
-    },
-    {
-        key: 'template-form',
-        label: 'menuItems.formTemplate',
-        to: ROUTES.TEMPLATE_FORM,
-        icon: 'home',
-    },
-    {
-        key: 'template-table',
-        label: 'menuItems.tableTemplate',
-        to: ROUTES.TEMPLATE_TABLE,
-        icon: 'home',
-    },
+        to: ROUTES.USER_APPLICATION,
+    }
 ]
 
 const ADMIN_MENU_ITEMS = [

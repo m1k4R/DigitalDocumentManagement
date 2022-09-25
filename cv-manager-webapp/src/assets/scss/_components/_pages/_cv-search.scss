@@ -1,0 +1,118 @@
+.p-cvSearch {
+    padding: 10px;
+
+    h6 {
+        margin-bottom: 30px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    &__filters {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        border-radius: 6px;
+        padding: 5px 10px;
+        background-color: white;
+        box-shadow: 0 2px 5px 0 rgba(black, 0.2);
+
+        .searchBy {
+            margin: 10px;
+            margin-left: 0;
+        }
+
+        .a-btn {
+            margin: 5px;
+        }
+    }
+
+    &__resultsTitle {
+        border-bottom: 1px solid gray;
+    }
+
+    &__results {
+
+        .itemBox {
+            border-radius: 6px;
+            padding: 5px 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px 0 rgba(black, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .name {
+                font-weight: 600;
+                margin-right: 20px;
+                font-size: 18px;
+            }
+
+            .education {
+                display: block;
+                color: gray;
+                font-style: italic;
+            }
+
+            .email,
+            .phone,
+            .city {
+                font-size: 14px;
+            }
+
+            .coverLetter {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            .download {
+                text-align: right;
+                color: #018fd0;
+                cursor: pointer;
+                font-size: 14px;
+                text-decoration: underline;
+            }
+
+            .highlightsContainer {
+                border-top: 1px solid silver;
+                border-bottom: 1px solid silver;
+                font-size: 14px;
+                margin: 10px 0;
+                padding: 10px 0;
+
+                .highlight {
+                    background-color: yellow;
+                    font-style: normal;
+                }
+
+            }
+            
+        }
+    }
+
+    .formButton {
+        .a-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .searchForm {
+        &.-education {
+            min-height: 300px;
+        }
+    }
+}
+
+.userForm {
+    h5 {
+        margin-bottom: 30px;
+    }
+}

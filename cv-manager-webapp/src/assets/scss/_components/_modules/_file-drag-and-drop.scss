@@ -1,8 +1,16 @@
 .m-fileDragAndDrop {
     height: 145px;
     margin-bottom: 45px;
+
+    label {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
     .a-file {
         display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         height: 100%;
         align-items: center;
         margin-bottom: 25px;
@@ -38,6 +46,11 @@
                 object-fit: contain;
                 border-radius: 50%;
             }
+        }
+
+        .file {
+            display: flex;
+            align-items: center;
         }
     }
 }

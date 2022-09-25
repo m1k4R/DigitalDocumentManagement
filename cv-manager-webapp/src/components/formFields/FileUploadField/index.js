@@ -4,7 +4,7 @@ import { useTranslate } from 'react-polyglot'
 
 import { useField } from 'formik'
 import * as Dropzone from 'react-dropzone/dist/index'
-import axiosClient, { BASE_FILE_URL, POST } from 'utils/axiosClient'
+import axiosClient, { BASE_URL, POST } from 'utils/axiosClient'
 
 import ENTITY from 'constants/entities'
 
@@ -31,16 +31,21 @@ const FileUpload = ({ name, type, label, entityType }) => {
             const acceptedData = acceptedFiles[0]
             formData.append('file', acceptedData)
 
-            axiosClient(POST, ENTITY.SYS_FILE, formData)
-                .then(async ({ data }) => {
-                    const { id, path } = data
-                    setImagePath(path)
-                    setValue({ id, entityType })
-                    setFile(path)
-                })
-                .catch((err) => {
-                    return <Alert />
-                })
+            if (entityType) {
+                axiosClient(POST, ENTITY.SYS_FILE, formData)
+                    .then(async ({ data }) => {
+                        const { id, path } = data
+                        setImagePath(path)
+                        setValue({ id, entityType })
+                        setFile(path)
+                    })
+                    .catch((err) => {
+                        return <Alert />
+                    })
+            } else {
+                setValue(acceptedData)
+                setFile(acceptedData.name)
+            }
         },
         [setValue]
     )
@@ -54,7 +59,7 @@ const FileUpload = ({ name, type, label, entityType }) => {
 
             <div {...getRootProps()} className="a-file">
                 <input {...getInputProps()} />
-                {file ? (
+                {imagePath ? (
                     <>
                         <div
                             className={`imageContainer ${
@@ -64,7 +69,7 @@ const FileUpload = ({ name, type, label, entityType }) => {
                             {imagePath && (
                                 <img
                                     className="image"
-                                    src={`${BASE_FILE_URL}${imagePath}`}
+                                    src={`${BASE_URL}${imagePath}`}
                                     alt={imagePath}
                                 />
                             )}
@@ -72,7 +77,7 @@ const FileUpload = ({ name, type, label, entityType }) => {
                     </>
                 ) : (
                     <div className="file">
-                        <Icon name="upload" size={48} />
+                        <Icon name="file" size={48} />
                         {file}
                     </div>
                 )}
@@ -91,7 +96,7 @@ FileUpload.propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.string,
     label: PropTypes.string,
-    entityType: PropTypes.string.isRequired,
+    entityType: PropTypes.string
 }
 
 export default FileUpload

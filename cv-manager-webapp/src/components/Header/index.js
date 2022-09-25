@@ -7,7 +7,7 @@ import LanguagePicker from 'components/LanguagePicker'
 const Header = ({ openSidebar, setOpenSidebar, hamBtnRef }) => {
     return (
         <header className="m-header -topLevel">
-            <div className="m-header__logo">LOGO</div>
+            <div className="m-header__logo">CV Manager</div>
             <div
                 className="m-toggler"
                 ref={hamBtnRef}
@@ -18,8 +18,8 @@ const Header = ({ openSidebar, setOpenSidebar, hamBtnRef }) => {
                 <span></span>
             </div>
             <div className="m-header__main">
-                <LanguagePicker />
-                <AvatarDropdown />
+                {/* <LanguagePicker /> */}
+                {/* <AvatarDropdown /> */}
             </div>
         </header>
     )

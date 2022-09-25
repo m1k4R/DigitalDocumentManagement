@@ -37,10 +37,8 @@ const Modal = ({ open, setOpen, closeOnClickOutside, type, children }) => {
                         className="m-modal__close"
                     ></span>
                     <div className="m-modal__body">
-                        <h4>Modal Template</h4>
                         {children}
                     </div>
-                    <div className="m-modal__footer"></div>
                 </div>
             </div>
         </div>

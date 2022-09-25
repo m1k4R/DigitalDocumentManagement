@@ -14,66 +14,35 @@ namespace CVManager.Repository
             unit.Add(new Application
             {
                 Id = Guid.NewGuid(),
-                ApplicantFirstname = "Donatelo",
-                ApplicantLastname = "Aligleri",
-                ApplicantEmail = "don@aligleri.com",
-                ApplicantPhone = "(020) 123-1231",
-                ApplicantEducationLevel = 6,
-                CvContent = "Backend developer interested in Java technologies.",
-                CoverLetterContent = @"I am Donatelo Aligleri i have worked with technologies such as Java, tomcat, c#, .net, visual studio, java script, Angular. Also i know thing or two about dev ops, docker, kubernates, aws and azure.",
-                CvFileName = "DanteCV.pdf",
-                CoverLetterFileName = "CoverLetter.pdf",
-                LatLongLocation = new GeoLocation(44.833, 20.500),
+                ApplicantFirstname = "Đorđe",
+                ApplicantLastname = "Petrović",
+                ApplicantEmail = "đoko@gmail.com",
+                ApplicantPhone = "003812232780",
+                ApplicantEducationLevel = 3,
+                CvContent = @"Đorđe Petrović\nemail: đoko@gmail.com\ntel: 003812232780\ngrad: Beograd\njunior frontend developer 2 god\n1",
+                CoverLetterContent = @"Zovem se Đorđe Petrović, radim kao frontend developer, trenutno sam početni medior i želim postati team lead. Koristim Javu i React.js",
+                CvFileName = "ĐorđePetrovićCV.pdf",
+                CoverLetterFileName = "ĐorđePetrovićLetter.pdf",
+                LatLongLocation = new GeoLocation(44.787197, 20.457273),
                 DateCreated = DateTime.UtcNow
             });
 
             unit.Add(new Application
             {
                 Id = Guid.NewGuid(),
-                ApplicantFirstname = "Laslo",
-                ApplicantLastname = "Kraus",
-                ApplicantEmail = "laslo@gmail.com",
-                ApplicantPhone = "(020) 123-4567",
-                ApplicantEducationLevel = 6,
-                CoverLetterContent = "Moje ime je Laslo Kraus. Iskusni sam programer vec duzi niz godina, a tehnologije u kojima sam radio su sledece: .Net, Angular, Jaa, c#, java srcipt. Koristio sam visual studio i visual studio code.",
-                CvContent = "Iskusni backend programer sa visegodisnjim iskustvom",
-                CvFileName = "LasloKCV.pdf",
-                CoverLetterFileName = "PopratnoPismo.pdf",
-                LatLongLocation = new GeoLocation(45.830, 20.462),
+                ApplicantFirstname = "Ања",
+                ApplicantLastname = "Савић",
+                ApplicantEmail = "anja@gmail.com",
+                ApplicantPhone = "003813455467",
+                ApplicantEducationLevel = 4,
+                CoverLetterContent = @"Ја сам Ања Савић, завршила сам програмирање на ФТН, тренутно сам у потрази за послом.Веома сам комуникативна и волим тимски рад.",
+                CvContent = @"Ања Савић\nemail: anja@gmail.com\ntel: 003813455467\n1",
+                CvFileName = "АњаСавићЦВ.pdf",
+                CoverLetterFileName = "АњаСавићПисмо.pdf",
+                LatLongLocation = new GeoLocation(43.891414, 20.350165),
                 DateCreated = DateTime.UtcNow
             });
 
-            unit.Add(new Application
-            {
-                Id = Guid.NewGuid(),
-                ApplicantFirstname = "Franc",
-                ApplicantLastname = "Kafka",
-                ApplicantEmail = "fkafka@gmail.com",
-                ApplicantPhone = "(020) 123-1356",
-                CoverLetterContent = "Veliki strastveni front end programer, koji uživa u pisanju java script koda. Od frejmvorka sam koristio Angular i React. Volim kučiće i mačiće pa se nadam da je firma pet friendly.",
-                ApplicantEducationLevel = 1,
-                CvContent = "Front end programer koji živi život punim plućima",
-                CvFileName = "FrKfCV.pdf",
-                CoverLetterFileName = "Popratno.pdf",
-                LatLongLocation = new GeoLocation(44.8125, 20.4612),
-                DateCreated = DateTime.UtcNow
-            });
-
-            unit.Add(new Application
-            {
-                Id = Guid.NewGuid(),
-                ApplicantFirstname = "Галанз",
-                ApplicantLastname = "Дел",
-                ApplicantEmail = "galanzd@gmail.com",
-                ApplicantPhone = "(020) 123-4567",
-                ApplicantEducationLevel = 2,
-                CoverLetterContent = "Добар сам програмер, радио сам на доста пројеката где сам користио Ангулар, јава сцрипт, Јаву, Реакт, Ангулар и девопс технологије. Дружељубиљив сам човек и волим друштво и кучиће и мачиће.",
-                CvContent = "Солидан програмер са добрим знањем солида.",
-                CvFileName = "ПрограмерГаланз.pdf",
-                CoverLetterFileName = "ППисмо.pdf",
-                LatLongLocation = new GeoLocation(44.7553, 19.6923),
-                DateCreated = DateTime.UtcNow
-            });
 
             return unit;
 

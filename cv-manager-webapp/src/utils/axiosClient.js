@@ -3,7 +3,6 @@ import axios from 'axios'
 import { getUserToken, clearStorage } from 'services/localStorage.service'
 
 export const BASE_URL = process.env.REACT_APP_API_HOST
-export const BASE_FILE_URL = process.env.REACT_APP_FILE_URL
 
 export const GET = 'get'
 export const POST = 'post'
@@ -33,6 +32,8 @@ const axiosClient = (
             'Access-Control-Allow-Origin': '*',
         },
     }
+    options.responseType = responseType
+    
     if (token) {
         options.headers['Authorization'] = `Bearer ${token}`
     }

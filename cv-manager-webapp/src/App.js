@@ -12,7 +12,7 @@ import NoAuthRoutes from 'routes/NoAuthRoutes'
 import Alert from 'components/Alert'
 
 const App = () => {
-    const token = getUserToken()
+    // const token = getUserToken()
 
     const {
         translations: { locale, messages },
@@ -22,7 +22,8 @@ const App = () => {
         <I18n locale={locale} messages={messages}>
             <BrowserRouter>
                 <Alert />
-                {token ? <AuthRoutes /> : <NoAuthRoutes />}
+                {/* {token ? <AuthRoutes /> : <NoAuthRoutes />} */}
+                <AuthRoutes />
             </BrowserRouter>
         </I18n>
     )
